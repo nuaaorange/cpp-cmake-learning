@@ -1,10 +1,6 @@
 #include <iostream>
 
-int calculate_difference(int sensor_value, int threshold)
-{
-    int difference = sensor_value - threshold;
-    return difference;
-}
+#include "sensor_processor.h"
 
 int main()
 {
@@ -17,7 +13,7 @@ int main()
     std::cout << "Threshold: " << threshold << std::endl;
     std::cout << "Difference: " << difference << std::endl;
 
-    if (sensor_value > threshold)
+    if (is_threshold_exceeded(sensor_value, threshold))
     {
         std::cout << "Warning: threshold exceeded!" << std::endl;
     }
