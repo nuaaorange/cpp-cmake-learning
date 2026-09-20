@@ -1,0 +1,17 @@
+# CMake和构建目录
+build/
+cmake-build-*/
+
+# C/C++编译产生的文件
+*.o
+*.obj
+*.out
+*.exe
+
+# 临时和日志文件
+*.tmp
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db

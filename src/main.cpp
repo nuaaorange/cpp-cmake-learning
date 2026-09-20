@@ -1,0 +1,30 @@
+#include <iostream>
+
+int calculate_difference(int sensor_value, int threshold)
+{
+    int difference = sensor_value - threshold;
+    return difference;
+}
+
+int main()
+{
+    int sensor_value = 28;
+    int threshold = 30;
+
+    int difference = calculate_difference(sensor_value, threshold);
+
+    std::cout << "Sensor value: " << sensor_value << std::endl;
+    std::cout << "Threshold: " << threshold << std::endl;
+    std::cout << "Difference: " << difference << std::endl;
+
+    if (sensor_value > threshold)
+    {
+        std::cout << "Warning: threshold exceeded!" << std::endl;
+    }
+    else
+    {
+        std::cout << "Status: normal" << std::endl;
+    }
+
+    return 0;
+}
